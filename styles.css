@@ -1,9 +1,22 @@
 /* General Styles */
+*{
+    box-sizing: border-box;
+}
+
 body {
-    margin: 0;
     font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    max-width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease-in-out;
 }
+/* Add these global styles at the top of your CSS file */
+
 
 header {
     display: flex;
@@ -141,8 +154,10 @@ header {
     background-color: #0055ff; /* Dark background */
     color: #ffffff;
     padding: 50px 100px;
-    height: 80vh;
-    position: relative;
+    min-height: 600px;
+    
+    
+    
 }
 
 /* Hero Content Styling */
@@ -205,6 +220,7 @@ header {
 /* For tablets and mobile devices */
 @media (max-width: 1024px) {
     .hero {
+        min-height: 600px;
         flex-direction: row;
         justify-content: left;
         padding: 50px 20px;
@@ -253,8 +269,10 @@ header {
 
 /* About Me Section */
 .about {
+    min-width: auto;
     padding: 80px 100px;
     background-color: #003aaf;
+    
 }
 
 .about-container {
@@ -352,6 +370,7 @@ header {
 
 /* Skills Section */
 .skills {
+    width: 100%;
     padding: 80px 20px;
     background-color: #0055ff;
     color: #ffffff;
@@ -459,6 +478,7 @@ header {
 
 /* Base styles for the project section */
 .projects {
+    width: 100%;
     padding: 50px 0;
     background-color: #003aaf;
     text-align: center;
@@ -585,7 +605,8 @@ header {
 
 /* Testimonials Section */
 .testimonials {
-    padding: 80px 100px;
+    background-color: #1a27df;
+    padding: 80px 50px;
     background-color: 0055ff;
     text-align: center;
 }
@@ -631,7 +652,7 @@ header {
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #0055ff;
+    border: 1px solid #ffffff;
 }
 
 .client-name {
@@ -653,7 +674,7 @@ header {
     }
 
     .testimonial-card {
-        max-width: 90%;
+        max-width: 100%;
         margin-bottom: 20px;
     }
 }
@@ -661,6 +682,7 @@ header {
 
 /* Experience Section Styling */
 .experience {
+    background-color: #0055ff;
     padding: 50px 100px;
     background-color: #ffffff;
     color: #333;
@@ -745,10 +767,11 @@ header {
 
 /* Contact Section */
 .contact {
-    padding: 80px 20px;
+    padding: 30px 20px;
     background-color: #2c54a5; /* Dark background for contrast */
     color: #ffffff;
-    text-align: center;
+    
+    
 }
 
 .contact-title {
@@ -758,11 +781,10 @@ header {
 }
 
 /* Contact Info Container */
-.contact-info {
+.contact {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
 }
 
 /* Contact Item */
@@ -770,11 +792,16 @@ header {
     color: #000;
     background-color: #ffffff;
     border-radius: 10px;
-    padding: 20px 30px;
+    margin: 20px 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     flex-basis: calc(20% - 40px); 
-    min-width: 220px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    padding: 20px 20px;
+    text-align: center;
+    cursor: pointer; 
+    
+    
 }
 
 .contact-item:hover {
@@ -786,7 +813,7 @@ header {
 .contact-item i {
     font-size: 2rem;
     color: rgb(0, 183, 255); /* Light color for icons */
-    margin-bottom: 10px;
+    
 }
 
 /* Contact Detail */
@@ -808,7 +835,8 @@ header {
 /* Tablet View (max-width: 768px) */
 @media (max-width: 768px) {
     .contact-item {
-        flex-basis: calc(50% - 40px); /* 2-column layout on tablets */
+        flex-basis: calc(50% - 40px);
+        min-width: 90%; /* 2-column layout on tablets */
     }
 }
 
@@ -816,12 +844,13 @@ header {
 @media (max-width: 480px) {
     .contact-item {
         flex-basis: 100%; /* Single column on mobile */
-        min-width: 100%;
+        min-width: 900%;
     }
 }
 
 /* Footer Section */
 .footer {
+    width: 100%;
     background-color: #2c54a5; /* Dark background */
     color: #ffffff;
     padding: 50px 20px;
